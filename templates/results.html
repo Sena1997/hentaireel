@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Search Results for "{{ keyword }}"</h2>
+<ul>
+    {% for result in results %}
+    <li>
+        <strong>Product Code:</strong> {{ result.product_code }}<br>
+        <strong>Performers:</strong> {{ result.performers }}<br>
+        <strong>Label:</strong> {{ result.label }}<br>
+        <strong>Genres:</strong> {{ result.genres }}<br>
+    </li>
+    {% endfor %}
+</ul>
+<a href="/">Go back</a>
+{% endblock %}
+
